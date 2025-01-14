@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <title>Kissasivu</title>
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #ffe6e6;
+            color: #cd448b;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            font-family: 'Playfair Display', serif;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #ff9999;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        header, section, footer {
+            padding: 80px 20px;
+            text-align: center;
+        }
+        header {
+            background-color: #ffcccc;
+        }
+        .cat-image {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 10px 0;
+        }
+        footer {
+            background-color: #ffb3b3;
+            padding: 10px;
+        }
+        #scrollTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff9999;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#about">Tietoa kissoista</a>
+        <a href="#gallery">Kuvagalleria</a>
+        <a href="#contact">Yhteystiedot</a>
+    </nav>
+
+    <header>
+        <h1>Tervetuloa Kissasivulle!</h1>
+    </header>
+
+    <section id="about">
+        <h2>Tietoa kissoista</h2>
+        <p>Tässä osiossa on tietoa kissoista.</p>
+    
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum id metus quis ullamcorper. Integer orci quam, porttitor aliquam luctus quis, aliquet ut ligula. Nulla lorem odio, laoreet sed vehicula vitae, consectetur eget metus. Sed dignissim imperdiet dolor, ac malesuada erat semper sed. Nam porttitor lectus lectus, vel sagittis sapien porta nec. Praesent ac tempus odio. Pellentesque ac risus quis elit faucibus pretium. Donec ut tincidunt ipsum, sed consequat purus. </p>
+    </section>
+
+    <section id="gallery">
+        <h2>Kuvagalleria</h2>
+        <img src="kissa1.jpg" alt="Kirjava kissa" class="cat-image">
+        <img src="kissa2.jpg" alt="Mustavalkoinen kissa" class="cat-image">
+    </section>
+
+    <section id="contact">
+        <h2>Yhteystiedot</h2>
+        <p>kissala@gmail.com</p>
+        <p>p.044 4444444</p>
+        <p>kissakatu 44, 40440 Kissamaa
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; Kissasivu 2025</p>
+    </footer>
+
+    <button id="scrollTop">Ylös</button>
+
+    <script>
+
+        window.addEventListener('scroll', function() {
+            const scrollTopButton = document.getElementById('scrollTop');
+            if (window.scrollY > 300) {
+                scrollTopButton.style.display = 'block';
+            } else {
+                scrollTopButton.style.display = 'none';
+            }
+        });
+
+        document.getElementById('scrollTop').addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+</body>
+</html>
